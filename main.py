@@ -4,7 +4,7 @@ import random
 pergunta = int(input('O que você deseja\n'
                      '1- Ver senhas\n'
                      '2- Adicionar senha\n'
-                     '3- Ver uma senha espesifica\n'
+                     '3- Ver uma senha especifica\n'
                      'DIGITE AQUI: '))
 if pergunta == 1:
     with open("senhas.txt", "r", encoding="utf-8") as ler_arquivo:
@@ -49,16 +49,14 @@ elif pergunta == 2:
 
 elif pergunta == 3:
 
-    sennha_especifica = str(input('Qual senha voce busca? '))
+    senha_especifica = str(input('Qual senha voce busca? '))
 
     with open("senhas.txt", "r", encoding="utf-8") as ler_senha_especifica:
         senha = ler_senha_especifica.readlines()
 
     for linha in senha:
-        if sennha_especifica in linha:
-            print(linha)
-        else:
-            print('Essa senha ainda nao existe.')
+        if senha_especifica in linha:
+            print(f'{linha}')
 
 else:
     print('Desculpe algo esta errado, tente novamente.')
